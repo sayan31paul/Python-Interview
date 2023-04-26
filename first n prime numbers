@@ -1,0 +1,24 @@
+#Python program to print first n Prime Number with explanation.
+
+
+def prime(num):
+    flag=0
+    for i in range(int(num/2),2,-1):
+        if num%i==0:
+            flag = 1
+            break
+    if flag==0:
+        return True
+    else:
+        return False
+
+num=int(input("Enter the number of prime numbers you want to print"))
+
+count = 0
+num_1=2
+while(count < num):
+    if prime(num_1)==True:
+        print (num_1)
+        count = count + 1
+        
+    num_1 = num_1+1
